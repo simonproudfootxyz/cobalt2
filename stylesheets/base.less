@@ -10,7 +10,7 @@
   color: @syntax-text-color;
 
   .wrap-guide {
-    background-color: @syntax-wrap-guide-color;
+    background-color: @highlight-line-blue;
   }
 
   .indent-guide {
@@ -27,12 +27,16 @@
 
     .line-number {
       &.cursor-line {
-        background-color: @syntax-gutter-background-color-selected;
+        background-color: @highlight-line-blue;
         color: @syntax-gutter-text-color-selected;
       }
 
       &.cursor-line-no-selection {
         color: @syntax-gutter-text-color-selected;
+      }
+
+      &.color-gutter:not(.folded) {
+        border-right: 5px solid;
       }
     }
 
@@ -58,7 +62,7 @@
   }
 
   .line.highlight-line {
-    background: @highlight-line-blue;
+    background: @highlight-line-blue !important;
   }
 }
 
